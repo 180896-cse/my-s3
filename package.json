@@ -1,0 +1,45 @@
+{
+  "name": "my-s3",
+  "version": "1.0.0",
+  "description": "self made service like s3 service",
+  "main": "server.ts",
+  "scripts": {
+    "dev": "nodemon ./server/server.ts",
+    "start": "npx ts-node ./server/server.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/180896-cse/my-s3.git"
+  },
+  "keywords": [
+    "s3",
+    "s3-replica"
+  ],
+  "author": "Pratap Shantanu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/180896-cse/my-s3/issues"
+  },
+  "homepage": "https://github.com/180896-cse/my-s3#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cookie-session": "^2.1.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "mongoose": "^8.10.1",
+    "passport": "^0.7.0",
+    "passport-google-oauth20": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.5",
+    "@types/passport": "^1.0.17",
+    "@types/passport-google-oauth20": "^2.0.16",
+    "@types/request": "^2.48.12",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  }
+}
