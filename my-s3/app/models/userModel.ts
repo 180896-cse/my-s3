@@ -24,6 +24,7 @@ export class UserModel extends BaseModel {
   firstName: string;
   lastName: string;
   email: string;
+  emailSec: string;
   password: string;
   createdAt: Date;
   updatedAt: Date;

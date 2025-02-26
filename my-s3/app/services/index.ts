@@ -10,4 +10,5 @@ export class UserService {
   getHello(): string {
     return __('hello', { name: 'Intent' });
   }
+  
 }

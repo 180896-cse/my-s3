@@ -21,7 +21,7 @@ import {
   VerifyOtpForChangePasswordDto,
 } from 'app/validators/auth';
 import { compareSync, hashSync } from 'bcrypt';
-import { JwtPayload, sign, verify } from 'jsonwebtoken';
+import { JwtPayload, sign, verify,SignOptions  } from 'jsonwebtoken';
 import { ulid } from 'ulid';
 
 @Injectable()
@@ -183,9 +183,10 @@ export class AuthService {
   }
 
   async makeToken(payload: Record<string, any>): Promise<string> {
-    return sign(payload, this.config.get('auth.secret') as string, {
+    const options: SignOptions = {
       issuer: this.config.get('app.url') as string,
-      expiresIn: this.config.get('auth.ttl') as string,
-    });
+      expiresIn: Number(this.config.get('auth.ttl') as string),
+    };
+    return sign(payload, this.config.get('auth.secret') as string, options);
   }
 }

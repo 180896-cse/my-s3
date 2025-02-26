@@ -30,7 +30,7 @@ export default configNamespace('queue', (): QueueOptions => {
         driver: 'redis',
         listenerType: 'poll',
         host: process.env.REDIS_HOST,
-        port: process.env.REDIS_PORT,
+        port: Number(process.env.REDIS_PORT),
         queue: process.env.QUEUE_NAME,
         username: process.env.REDIS_USERNAME,
         password: process.env.REDIS_PASSWORD,
